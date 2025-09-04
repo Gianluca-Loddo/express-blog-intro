@@ -35,9 +35,9 @@ const express = require('express');
 // Crea un'app Express
 const app = express();
 
-// 1. Definisci una route per la homepage
+// 1. Definizione di una route per la homepage
 app.get('/', (req, res) => {
-  res.send('Server del mio blog!');
+  res.send('Server del mio blog');
 });
 
 // 2. Array di post del blog
@@ -50,12 +50,12 @@ const posts = [
 ];
 
 
-// Definisci una route per la bacheca dei post
+// 3. Definizione di una route per la bacheca dei post
 app.get('/bacheca', (req, res) => {
   res.json(posts);
 });
 
-// Configura la cartella 'public' per servire file statici (es. immagini)
+// 4. Configurazione della cartella 'public' per servire file statici (es. immagini)
 app.use(express.static('public'));
 
 // Avvia il server
