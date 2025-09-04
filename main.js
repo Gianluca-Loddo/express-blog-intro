@@ -35,6 +35,8 @@ const express = require('express');
 // Crea un'app Express
 const app = express();
 
+// const port = 3000; // Definisce la porta su cui il server ascolterà (alternativa: usare direttamente 3000 in app.listen)
+
 // 1. Definizione di una route per la homepage
 app.get('/', (req, res) => {
   res.send('Server del mio blog');
@@ -58,10 +60,22 @@ app.get('/bacheca', (req, res) => {
 // 4. Configurazione della cartella 'public' per servire file statici (es. immagini)
 app.use(express.static('public'));
 
-// Avvia il server
+// 5. Avvio del server
 app.listen(3000, () => {
   console.log('Server in ascolto sulla porta 3000');
 });
+
+// in alternativa, si può usare anche questa sintassi:
+// app.listen(port, () => {
+//   console.log(`Server in ascolto sulla porta ${port}`);
+// });
+
+
 // Ora si può accedere a http://localhost:3000/ per vedere la homepage
 // E a http://localhost:3000/bacheca per vedere la lista dei post in formato JSON
 // Le immagini dovrebbero essere accessibili tramite URL come http://localhost:3000/images/post1.jpg
+
+
+
+// Per testare il server, bisogna aprire Postman e fare una richiesta GET a http://localhost:3000/ per la homepage
+// e a http://localhost:3000/bacheca per vedere la lista dei post in formato JSON.
