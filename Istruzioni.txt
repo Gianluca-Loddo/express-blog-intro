@@ -9,3 +9,25 @@ Creiamo un array dove inserire una lista di almeno 5 post, per ognuno indicare t
 Creiamo poi una rotta /bacheca che restituisca un oggetto json con la lista dei post.,
 Configuriamo gli asset statici sull’applicazione in modo che si possano visualizzare le immagini associate ad ogni post.,
 Testare su postman
+
+
+
+
+- SETUP
+
+# creazione della cartella del repo
+mkdir express-blog-intro && cd express-blog-intro
+git init
+
+# inizializzazione npm e installazione express
+npm init -y
+npm i express
+
+
+
+package.json
+# È il cuore del progetto Node.js, il file che definisce il progetto e le sue dipendenze.
+# Dentro ci sono: nome e versione del progetto, dipendenze (le librerie usate, es. Express), script (es. npm start, npm run dev),metadati vari.
+
+package-lock.json
+# Contiene la versione esatta delle dipendenze installate, per garantire che tutti lavorino con le stesse versioni.

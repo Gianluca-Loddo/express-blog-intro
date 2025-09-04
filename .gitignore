@@ -1,0 +1,2 @@
+#  Ignore node modules: contiene le dipendenze del progetto, tutte le librerie installate tramite npm
+node_modules/ 
