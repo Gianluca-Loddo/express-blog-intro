@@ -1,2 +1,5 @@
 #  Ignore node modules: contiene le dipendenze del progetto, tutte le librerie installate tramite npm
 node_modules/ 
+1. Possibile soluzione.txt
+2. Appunti e Comandi.txt
+.gitignore

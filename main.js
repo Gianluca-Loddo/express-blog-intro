@@ -44,11 +44,11 @@ app.get('/', (req, res) => {
 
 // 2. Array di post del blog
 const posts = [
-  { titolo: 'Primo Post', contenuto: 'Questo è il contenuto del primo post.', immagine: '/images/post1.jpg', tags: ['intro', 'benvenuto'] },
-  { titolo: 'Secondo Post', contenuto: 'Questo è il contenuto del secondo post.', immagine: '/images/post2.jpg', tags: ['aggiornamento', 'news'] },
-  { titolo: 'Terzo Post', contenuto: 'Questo è il contenuto del terzo post.', immagine: '/images/post3.jpg', tags: ['tutorial', 'javascript'] },
-  { titolo: 'Quarto Post', contenuto: 'Questo è il contenuto del quarto post.', immagine: '/images/post4.jpg', tags: ['nodejs', 'express'] },
-  { titolo: 'Quinto Post', contenuto: 'Questo è il contenuto del quinto post.', immagine: '/images/post5.jpg', tags: ['conclusione', 'fine'] },
+  { titolo: 'Primo Post', contenuto: 'Questo è il contenuto del primo post: ciambellone', immagine: '/ciambellone.jpeg', tags: ['intro', 'benvenuto'] },
+  { titolo: 'Secondo Post', contenuto: 'Questo è il contenuto del secondo post: cracker alla barbabietola', immagine: '/cracker_barbabietola.jpeg', tags: ['aggiornamento', 'news'] },
+  { titolo: 'Terzo Post', contenuto: 'Questo è il contenuto del terzo post: pane fritto dolce', immagine: '/pane_fritto_dolce.jpeg', tags: ['tutorial', 'javascript'] },
+  { titolo: 'Quarto Post', contenuto: 'Questo è il contenuto del quarto post: pasta alla barbabietola', immagine: '/pasta_barbabietola.jpeg', tags: ['nodejs', 'express'] },
+  { titolo: 'Quinto Post', contenuto: 'Questo è il contenuto del quinto post: torta paesana', immagine: '/torta_paesana.jpeg', tags: ['conclusione', 'fine'] },
 ];
 
 
@@ -57,8 +57,8 @@ app.get('/bacheca', (req, res) => {
   res.json(posts);
 });
 
-// 4. Configurazione della cartella 'public' per servire file statici (es. immagini)
-app.use(express.static('public'));
+// 4. Configurazione della cartella 'images' per servire file statici (in questo caso le nostre immagini)
+app.use(express.static('images')); 
 
 // 5. Avvio del server
 app.listen(3000, () => {
@@ -73,7 +73,7 @@ app.listen(3000, () => {
 
 // Ora si può accedere a http://localhost:3000/ per vedere la homepage
 // E a http://localhost:3000/bacheca per vedere la lista dei post in formato JSON
-// Le immagini dovrebbero essere accessibili tramite URL come http://localhost:3000/images/post1.jpg
+// Le immagini dovrebbero essere accessibili tramite URL come http://localhost:3000/ciambellone.jpeg etc.
 
 
 
