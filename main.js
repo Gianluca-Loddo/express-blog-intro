@@ -52,8 +52,21 @@ const posts = [
 ];
 
 
+
 // 3. Definizione di una route per la bacheca dei post
 app.get('/bacheca', (req, res) => {
+
+  // Invia l'array di post come risposta JSON
+  // volendo potremmo inserire la variabile const posts direttamente qui dentro, ma è più pulito tenerla fuori
+  /*const posts = [
+    { titolo: 'Primo Post', contenuto: 'Questo è il contenuto del primo post: ciambellone', immagine: '/ciambellone.jpeg', tags: ['intro', 'benvenuto'] },
+    { titolo: 'Secondo Post', contenuto: 'Questo è il contenuto del secondo post: cracker alla barbabietola', immagine: '/cracker_barbabietola.jpeg', tags: ['aggiornamento', 'news'] },
+    { titolo: 'Terzo Post', contenuto: 'Questo è il contenuto del terzo post: pane fritto dolce', immagine: '/pane_fritto_dolce.jpeg', tags: ['tutorial', 'javascript'] },
+    { titolo: 'Quarto Post', contenuto: 'Questo è il contenuto del quarto post: pasta alla barbabietola', immagine: '/pasta_barbabietola.jpeg', tags: ['nodejs', 'express'] },
+    { titolo: 'Quinto Post', contenuto: 'Questo è il contenuto del quinto post: torta paesana', immagine: '/torta_paesana.jpeg', tags: ['conclusione', 'fine'] },
+  ];*/
+
+  
   res.json(posts);
 });
 
